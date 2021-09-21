@@ -147,3 +147,92 @@ def c():
 
 
 a()
+
+def average_of_3(x, y, z):
+    average = (x + y + z) / 3
+    return average
+
+my_result= average_of_3(10, 20, 30)
+print(my_result)
+
+# or
+
+n1= 10
+n2= 20
+n3= 30
+
+my2_result= average_of_3(n1, n2, n3)
+print(my2_result)
+
+
+# if statemant
+#  also called conditional logic
+
+a = 4
+b = 5
+c = 6
+
+# <= less that or equal to
+if a <= b:
+    print("a is smaller than b")
+# >= grater than or equal to
+if a >= b:
+    print(" b is smaller than a")
+# == a & b are equal NOT =
+if a == b:
+    print(" a is equal to be ")
+
+if a < b and a < c:
+    print("a is less than b and c")
+
+# != not equal
+
+if a != b:
+    print("a is not equal to b")
+
+t  = True
+it = True
+nt = False
+#this works but is not proper
+if t == True:
+    print("t is true!!")
+# do this insted
+if t:
+    print("t is true")
+
+if not it:
+    print("t is false")
+if t and it:
+    print("both are true")
+
+d = 3
+f = 4
+c = d == f
+
+print(c)
+
+if 1:
+    print("1")
+if "A":
+    print("A")
+# if 0:
+#    print ("0")
+# ^ doesnt work
+
+volume = input ("what is the volume in ml ")
+volume= int(volume)
+print(f"you said the volume was {volume}.")
+
+if volume > 110
+    print("wow")
+elif volume > 90:
+    print("the volume is big")
+elif volume < 30
+    print("volume is small")
+else:
+    print("the volume is not big")
+print("done")
+
+
+
+
