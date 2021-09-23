@@ -84,3 +84,39 @@ while q > -1:
     print(q)
     q -= 1
 
+quit = "n"
+while quit.lower() == "n" or quit.lower() == "no":
+    quit = input("do you want to quit? ")
+
+
+# .lower() convers everything they type lowercase same with upper
+
+# bolian variable
+
+done = False
+
+while not done:
+    end = input("do you want to end? ")
+    if quit.lower() == "y":
+        done = True
+        print("bye")
+#break exits out of the loop continue stops loop but starts it from the top
+
+
+def count_up(x, y):
+    for v in range(x, y + 1):
+        print(v)
+
+count_up(5, 10)
+
+# random numbers
+
+import random
+for t in range(4):
+    my_number= random.randrange(5)
+    if my_number == 0:
+        print("found a dragon")
+    else:
+        print("no dragon")
+
+    print(my_number)
