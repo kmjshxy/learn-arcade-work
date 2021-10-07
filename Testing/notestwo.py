@@ -100,5 +100,98 @@ for item in clist:
 
 print(list_total)
 
+# difference between [] and ()
+"""
+ tuples () cant change items in the list 
+ but they are faster 
+ use text for these mostly """
+
+dlist = [2, 3, 4, 5, 4]
+
+for item in dlist:
+    item = item * 2 # makes a copy of the items in the list
+
+# if u want to modify
+
+for i in range(len(dlist)):
+    dlist[i] *= 2
+
+print(dlist)
+
+x = "012345"
+
+print("x=", x)
+print("x=[0]", x[0])
+
+print("x[:5]=", x[:5])
+
+#for i in range("test stuff"):
+#    print(i)
+
+month_list = ["jan", "feb", "mar", "apr", "may", "jun", "jly", "aug", "sep", "oct", "nov", "dec"]
+
+m = int(input("enter a month number"))
+
+print(month_list[m - 1])
 
 
+# letters = number
+
+#75 65 84 69 - kate
+# utf8 - the code called
+
+
+
+plain_text = "This is a test. ABC abc"
+
+for c in plain_text:
+    x = ord(c)
+    x += 1
+    ch = chr(x)
+    print(ch, end=" ")
+
+# ord(c) is get the numbers into the numbers the computer stores
+
+# chr() makes the number into a characture
+
+elist = [4, 2, 56, 2, 0]
+biggest_number = elist[0]
+for item in elist:
+    if item > biggest_number:
+        biggest_number = item
+
+print(biggest_number)
+
+
+''' object packaging 
+'''
+#calss names get capitalized
+class address:
+    """
+    This is a video game character
+    """
+    def __init__(self):
+        """ create my character"""
+        self.line1= ""
+        self.name = ""
+        self.line2 = 0
+        self.city = 0
+        # self. keeps the variable
+    # method is a function in a class
+
+
+
+def main():
+    # you NEED the parentheses after address
+    home_address = address()
+    home_address.name = "josh smith"
+    home_address.line2 = "lol"
+
+    vacation_home_address = address()
+    vacation_home_address.name = "john smith"
+    vacation_home_address.line2 = "no"
+
+    
+
+
+main()
