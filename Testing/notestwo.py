@@ -192,6 +192,80 @@ def main():
     vacation_home_address.line2 = "no"
 
     
+# static variables
+# same 4 all objects
+class Cat:
+    population = 0
+
+    def __init__(self, name):
+        self.name = name
+        Cat.population += 1
+
+
+def main2():
+    cat1 = Cat("Pat")
+    cat2 = Cat("Pepper")
+    cat3 = Cat("Pouncy")
+# the cat population is the same for all the cats
+    print("The cat population is:", Cat.population)
+
+main2()
+
+
+class Dog:
+    def __init__(self):
+        self.name = " "
+# don't make new __init__ method
+    def bark(self):
+        print("wooof, says", self.name)
+
+
+my_dog = Dog()
+my_dog.name = "spot"
+my_dog.bark()
+
+
+
+# references
+
+class Boat():
+    def __init__(self):
+        self.tonnage = 0
+        self.name = ""
+        self.is_docked = True
+
+    def dock(self):
+        if self.is_docked:
+            print("You are already docked.")
+        else:
+            self.is_docked = True
+            print("Docking")
+
+    def undock(self):
+        if not self.is_docked:
+            print("You aren't docked.")
+        else:
+            self.is_docked = False
+            print("Undocking")
+
+class Subraine(Boat):
+    def submerge(self):
+        print("it sumbmerge")
+
+# ch 17 supers
+# supers call what the parent is doing but you can add stuff
+# super().__init__()
+
+"""
+Is-A 
+
+Has-A 
+
+"""
+
+
 
 
 main()
+
+
