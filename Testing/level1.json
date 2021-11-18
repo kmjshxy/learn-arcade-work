@@ -1,0 +1,33 @@
+{ "backgroundcolor":"#1e0026",
+ "compressionlevel":-1,
+ "height":10,
+ "infinite":false,
+ "layers":[
+        {
+         "data":[0, 0, 10, 0, 0, 0, 0, 0, 10, 0, 10, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 87, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 71, 84, 84, 72, 0, 0, 10, 0, 0, 0, 0, 72, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 71, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 87, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 71, 72, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 82, 0, 86, 0, 0, 0, 0, 0, 0, 0, 0, 86, 0, 0, 82, 76, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69, 69],
+         "height":10,
+         "id":1,
+         "name":"walls",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":15,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":2,
+ "nextobjectid":1,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.7.1",
+ "tileheight":128,
+ "tilesets":[
+        {
+         "firstgid":1,
+         "source":"platformertiles.json"
+        }],
+ "tilewidth":128,
+ "type":"map",
+ "version":"1.6",
+ "width":15
+}
