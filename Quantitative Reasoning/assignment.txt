@@ -1,0 +1,40 @@
+Kate Minette                  Quantitative Reasoning                      dec 1
+
+1. by looking back at past examples of when we used these techniques and what they accomplished,
+    for example if you are trying to find out if you need to use a for loop or a while
+    loop you can look back at what situation you used them in and how it applies to
+    what you are doing. It also helps by keeping what you are trying to do in your mind,
+    by understanding what you are trying to do it makes it easy to understand
+    the steps you need to take to accomplish your goal. It also helps if you keep
+    the problems that you are trying to solve small, so it's easy to understand.
+    if you keep your problems small it makes it easy to make small steps and keep testing
+    things.
+
+2. There are lots of ways to communicate your ideas to other programmers. in the
+    code you can add comments to help others understand just by looking at your code.
+    Just like comments naming your variables and functions in an appropriate way
+    makes it much easier to understand your code. For example if you had a function
+    that makes a sprite walk, you should name it something like sprite_walking.
+    You can also communicate what your code does with others by writing about it
+    and explaining what your thoughts are
+
+
+3. You can test and evaluate your code in lots of ways. By putting your code in different
+    scenarios to see if your code will work correctly no matter what It's trying to do.
+    In the event that your code doesn't work it helps to understand what went wrong
+    and if you don't know how to find out. Understanding what different errors mean is
+    an easy way to figure out how to fix your code. To avoid errors in general try
+    running your code periodically, so you can catch the errors as soon as possible.
+    If you don't understand and can't figure it out the error you can consult with other people
+    and get impute from them, even if your code is working it could be helpful to
+    consult with others because they might think of scenarios that you had not considered.
+
+
+4. by using numerical methods you often limit yourself to only looking at statistics.
+   Like defining a student only by their gpa, you don't get the full picture of
+   what kind of student they are. By only looking at numerical methods there is no
+   context for what is happening. if you only look at an athletes' statistics you don't
+   look at how they interact with the team and how they affect the others. By using
+   only numerical methods you are ignoring lots of other factors.
+
+
