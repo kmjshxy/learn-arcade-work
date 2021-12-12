@@ -35,7 +35,7 @@ def load_texture_pair(filename):
     """
     return [
         arcade.load_texture(filename),
-        arcade.load_texture("plat1.png", flipped_horizontally=True)]
+        arcade.load_texture("plat1fl.png", flipped_horizontally=True)]
 
 
 class PlayerCharacter(arcade.Sprite):
@@ -58,10 +58,11 @@ class PlayerCharacter(arcade.Sprite):
         # --- Load Textures ---
 
         # Images from Kenney.nl's Asset Pack 3
-        main_path = "plat1.png"
+
+        self.main_path = ("plat1fl.png")
 
         """ I drew the character texture"""
-        self.idle_texture_pair = load_texture_pair("plat1.png")
+        self.idle_texture_pair = load_texture_pair(self.main_path)
 
 
 
@@ -117,6 +118,9 @@ class MyGame(arcade.Window):
         self.in_the_basket = 0
         self.END = False
 
+        self.rock_sound = arcade.load_sound(":resources:sounds/rockHit2.wav")
+        self.jump = arcade.load_sound(":resources:sounds/jump4.wav")
+
         self.total_time = 0.0
         self.output = "00:00:00"
 
@@ -152,7 +156,7 @@ class MyGame(arcade.Window):
         self.basket.center_y = 1295
         self.basket_list.append(self.basket)
 
-        self.total_time = 50
+        self.total_time = 55
 
 
 
@@ -233,11 +237,11 @@ class MyGame(arcade.Window):
         arcade.draw_text(f"holding: {self.holding_rn}", 10, 10, arcade.color.BLACK_BEAN, 20)
         arcade.draw_text(f"in the basket: {self.in_the_basket}", 170, 10, arcade.color.BLACK_BEAN, 20)
         arcade.draw_text(f"seconds left:{self.total_time}", 580, 10, arcade.color.BLACK_BEAN, 20)
-        if self.in_the_basket == 1:
+        if self.in_the_basket == 10:
             self.END = True
             arcade.draw_rectangle_filled(self.width // 2, 20, self.width, 8000, arcade.color.LIGHT_GREEN)
             arcade.draw_text("CONGRATS YOU WON!!", 100, 300, arcade.color.BLACK_BEAN, 40)
-            arcade.draw_text(f"you collected all the rocks with {self.total_time} seconds to spare", 70, 250,
+            arcade.draw_text(f"you collected all the rocks with {self.total_time // 1} seconds to spare", 150, 250,
                              arcade.color.BLACK_BEAN, 15)
         if self.total_time <= 0:
             arcade.draw_rectangle_filled(self.width // 2, 20, self.width, 8000, arcade.color.PINK)
@@ -264,10 +268,12 @@ class MyGame(arcade.Window):
         if key == arcade.key.UP:
             if self.physics_engine.can_jump():
                 self.player_sprite.change_y = 9
+                arcade.play_sound(self.jump)
         elif key == arcade.key.LEFT:
             self.player_sprite.change_x = -PLAYER_MOVEMENT_SPEED
         elif key == arcade.key.RIGHT:
             self.player_sprite.change_x = PLAYER_MOVEMENT_SPEED
+
 
 
     def on_key_release(self, key, modifiers):
@@ -296,10 +302,12 @@ class MyGame(arcade.Window):
             if self.holding_rn <= 3:
                 rock.remove_from_sprite_lists()
                 self.holding_rn += 1
+                arcade.play_sound(self.rock_sound)
         placed_in_the_basket = arcade.check_for_collision_with_list(self.player_sprite, self.basket_list)
         if placed_in_the_basket:
             self.in_the_basket += self.holding_rn
             self.holding_rn = 0
+
 
         if self.END == False:
             self.total_time -= delta_time
